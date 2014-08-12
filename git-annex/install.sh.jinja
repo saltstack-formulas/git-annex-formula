@@ -1,0 +1,6 @@
+#!/bin/bash
+{% from "git-annex/map.jinja" import gitannex with context %}
+
+cabal update
+cabal install c2hs alex --bindir=/usr/local/bin
+cabal install git-annex-{{ gitannex.version }} --force-reinstalls --bindir=/usr/local/bin -f'-webdav'

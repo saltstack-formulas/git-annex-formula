@@ -1,0 +1,11 @@
+gitannex:
+  lookup:
+    pkgs:
+      - git
+      - haskell-platform
+      - libgnutls-dev
+      - libgsasl7-dev
+      - zlib1g-dev
+      - libxml2-dev
+
+    version: 5.20140717

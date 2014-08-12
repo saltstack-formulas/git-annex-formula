@@ -1,0 +1,13 @@
+{% set gitannex = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': [
+          'haskell-platform',
+          'libgnutls-dev',
+          'libgsasl7-dev',
+          'zlib1g-dev',
+          'libxml2-dev'
+        ],
+        'version': '5.20140717'
+    },
+
+}, merge=salt['pillar.get']('gitannex:lookup')) %}
